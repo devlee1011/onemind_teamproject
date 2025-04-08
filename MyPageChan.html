@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한마음팀 소개 프로젝트</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+
+    * {
+        font-family: "Single Day", cursive;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .container {
+        display: flex;
+        height: 100vh;
+        background: linear-gradient(to right, #ffcdd6, #a0d0ee);
+    }
+
+    .left-panel0 {
+        flex: 0.6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left-panel1 {
+        flex: 0.6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right-panel {
+        flex: 0.5;
+        background-color: #ffcdd6;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem;
+    }
+
+    .profile-img {
+        width: 300px;
+        border-radius: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    button {
+        margin: 0.5rem 0;
+        padding: 1rem;
+        border: none;
+        border-radius: 8px;
+        background-color: white;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .social-icons {
+        margin-top: 1rem;
+        display: flex;
+        gap: 1rem;
+    }
+
+    .profile-img {
+        width: 500px;
+        height: 500px;
+    }
+
+    .hidden-box0 {
+        display: none;
+    }
+
+    .hidden-box1 {
+        display: none;
+    }
+
+    .hidden-box2 {
+        display: none;
+    }
+
+    .hidden-box3 {
+        display: none;
+    }
+
+    
+</style>
+
+<script>
+
+    function MBTI() {
+        $('#MBTI').toggle();
+    }
+
+    function 취미() {
+        $('#취미').toggle();
+    }
+
+    function 좋아하는영화() {
+        $('#좋아하는영화').toggle();
+    }
+
+    function 별자리() {
+        $('#별자리').toggle();
+    }
+
+</script>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h2>한마음팀의 소개 페이지✨</h2>
+        </header>
+        <div class="left-panel0">
+            <img src="1574343973542.jpg" alt="프로필 사진" class="profile-img" />
+        </div>
+        <div class="left-panel1">
+            <img src="20170220_174145.jpg" alt="프로필 사진" class="profile-img" />
+        </div>
+        <div class="right-panel">
+            <h1>최세찬의 소개</h1>
+            <p>코딩을 배워서 취업 또는 창업에 직접 활용해보고 인생의 배움 하나를 얻어가는 좋은 경험이 되었으면 좋겠습니다.</p>
+            <button onclick="MBTI()">MBTI</button>
+            <div id="MBTI" class="hidden-box0"><button>차분하고 창의적이며 낭만적인 성향으로 보이면서도, 내적 신념이 깊은 열정적인 중재자 유형인
+                    INFP입니다.</button></div>
+            <button onclick="취미()">취미</button>
+            <div id="취미" class="hidden-box1"><button>게임 하는것과 음악 듣는걸 매우 좋아하고 풍경 사진 찍는것도 종종 즐깁니다.</button></div>
+            <button onclick="좋아하는영화()">좋아하는영화</button>
+            <div id="좋아하는영화" class="hidden-box2"><button>신카이 마코토 감독의 너의 이름은을 가장 좋아합니다.</button></div>
+            <button onclick="별자리()">별자리</button>
+            <div id="별자리" class="hidden-box3"><button>양력 5월 30일생으로 쌍둥이 자리입니다.</button></div>
+            <div class="cards"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
