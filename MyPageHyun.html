@@ -4,8 +4,153 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
     <title>마이페이지(이의현)</title>
-    <style></style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap");
+
+      html,
+      body {
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+        height: 100%;
+        font-family: "Gowun Dodum", sans-serif;
+      }
+
+      .main {
+        background-color: #f5f5f5;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .header {
+        width: 100%;
+        height: 5rem;
+        padding: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .container {
+        display: flex;
+        height: 100%;
+      }
+
+      .col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .circle {
+        border-radius: 50%;
+        width: 60%;
+        height: 60%;
+        background-size: cover;
+        background-image: url("../onemind_teamproject/public/leeuihyun/hyunImg.png");
+        background-position: center;
+        margin-bottom: 1rem;
+      }
+
+      .my-bg-name {
+        font-style: oblique;
+      }
+
+      .desc {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 2rem;
+      }
+      .desc-header {
+        width: 100%;
+      }
+
+      .go-back {
+        cursor: pointer;
+      }
+    </style>
+    <script>
+      function backClickEvent() {
+        alert("메인 주소를 정하면 메인으로 가는 뒤로가기 버튼");
+      }
+    </script>
   </head>
-  <body></body>
+  <body>
+    <div class="main">
+      <div class="header">
+        <img
+          class="go-back"
+          src="../onemind_teamproject/public/leeuihyun/arrow-29801_640.png"
+          alt="뒤로가기"
+          width="3%"
+          onclick="backClickEvent()"
+        />
+      </div>
+      <div class="container row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="circle"></div>
+          <h1 class="my-bg-name"><b>Lee Ui Hyun</b></h1>
+          <p>
+            안녕하세요 이의현입니다.
+            <br />
+            효율적인 코드를 작성하고 코드리뷰를 중요시하는 개발자가 되고
+            싶습니다.
+            <br />
+            다들 기간동안 힘내봐요! 🔥
+          </p>
+        </div>
+        <div class="col">
+          <div class="desc">
+            <h2 class="desc-header">ABOUT</h2>
+            <p>Name : 이의현 / Lee Ui Hyun</p>
+            <p>Birth : 1997.04.19</p>
+            <p>Email : meta212121@naver.com</p>
+          </div>
+
+          <div class="desc">
+            <h2 class="desc-header">LIKES</h2>
+            <p>농구하기</p>
+            <p>게임하기</p>
+            <p>영화보기</p>
+            <p>여자친구랑 수다떨기</p>
+          </div>
+
+          <div class="desc">
+            <h2 class="desc-header">IDENTIFIER</h2>
+            <p>멈추지 않고 꾸준하게 하기!</p>
+            <p>양자리</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="desc">
+            <h2 class="desc-header">MBTI</h2>
+            <p>ISTJ</p>
+          </div>
+
+          <div class="desc">
+            <h2 class="desc-header">FAVORITE MOVIE</h2>
+            <p>인터스텔라</p>
+          </div>
+          <div class="desc">
+            <h2 class="desc-header">FAVORITE PHOTO</h2>
+            <img
+              src="../onemind_teamproject/public/leeuihyun/mong2.jpeg"
+              alt="몽이"
+              width="50%"
+            />
+            <p>몽이🐶</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
