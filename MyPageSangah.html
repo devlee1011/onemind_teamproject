@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>팀원 소개</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: "IBM Plex Sans KR", sans-serif;
+            font-size: 18px;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .profile_img {
+            height: auto;
+            width: 100%;
+            border-radius: 5px 5px 0px 0px;
+
+            mask-image: linear-gradient(to top,
+                    transparent 0%,
+                    black 30%);
+            -webkit-mask-image: linear-gradient(to top,
+                    transparent 0%,
+                    black 30%);
+        }
+
+        /* 배경 색상 조정은 여기에서 */
+        #content_bg {
+            height: 700px;
+            background-color: rgba(255, 170, 181, 0.123);
+        }
+
+        .bold_font {
+            font-weight: bold;
+        }
+
+        .make_scroll {
+            float: left;
+            overflow-y: auto;
+            width: 100%;
+            height: 700px;
+        }
+
+        .img_frame {
+            width: 300px;
+            transition: transform 0.3s ease
+        }
+
+        .img_frame:hover {
+            transform: scale(1.03);
+        }
+
+        /* 하이퍼링크 텍스트 스타일, 본인 페이지 배경색에 맞게 커스텀 */
+        a:link {
+            color: rgb(237, 121, 208);
+        }
+
+        a:visited {
+            color: black;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        a:active {
+            color: green;
+        }
+
+        .go-back {
+            cursor: pointer;
+            transition: transform 0.2s ease
+        }
+
+        .go-back:hover {
+            opacity: 0.8;
+            transform: scale(1.02);
+        }
+    </style>
+    <script>
+        function backClickEvent() {
+            alert('뒤로가기');
+            history.back();
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="p-2 bg-body">
+            <div class="mt-3 mx-3">
+                <img class="go-back" src="../onemind_teamproject/public/leeuihyun/arrow-29801_640.png" alt="뒤로가기"
+                    width="4%" onclick="backClickEvent()" />
+            </div>
+            <div class="container">
+                <div class="row align-items-md-stretch">
+                    <!-- 프로필 박스 -->
+                    <div class="col-md-4">
+                        <div id="content_bg" class="my-5 shadow rounded">
+                            <!-- 프로필 사진 설정 -->
+                            <img class="profile_img"
+                                src="https://postfiles.pstatic.net/MjAyNTA0MDlfMjQ3/MDAxNzQ0MTkxNDI4MDU0.c0F5gJgqEm3iyuOWVmLnUEdDVjRqZ-3AC5VGm7xBdNAg.Uf9RwZ3is0EmFZyHW8l-zeuAZ6aBsKXb-S1_C9iJvT8g.JPEG/IMG_7634.JPG?type=w580" />
+                            <!-- 이름, 색상 변경 -->
+                            <h2 class="bold_font my-3"
+                                style="text-shadow: 2px 2px 3px rgb(184, 184, 184); text-align: center; color: rgb(0, 0, 0);">
+                                안상아</h2>
+                            <div class="px-5">
+                                <!-- 좌우명, 개인을 나타내는 말, 연락처 -->
+                                <h5 class="bold_font mb-4" style="text-align: center;">❤️‍🔥남을 미워하는 데에 시간을 낭비하지 말자.<h5>
+                                        <p class="bold_font">Email : <a>real_1229@gmail.com</a></a></p>
+                                        <p class="bold_font">SNS : <a
+                                                href="https://www.instagram.com/sangah_an/">instagram.com/sangah_an</a></p>
+                                        <p class="bold_font">Blog : <a
+                                                href="https://blog.naver.wywyaaa">blog.naver/wywyaaa</a></p>
+                                        <p class="bold_font">Github : <a
+                                                href="https://github.com/super7-7">github.com/super7-7</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 메인 박스 -->
+                    <div class="col-md-8">
+                        <div id="content_bg" class="make_scroll p-4 my-5 shadow mb-5 rounded">
+                            <!-- 이곳에 내용을 자유롭게 작성 -->
+                            <h3 class="bold_font pb-3 border-bottom">🖐️ printf("Hello, World!")</h3>
+                            <div class="p-3">
+                                <p> <b>안녕하세요!</b> 코린이 안상아입니다.
+                                <p> 코딩은 처음이라 많이 부족하지만 끝까지 최선을 다 하겠습니다!!</p>
+                            </div>
+                            <h3 class="bold_font pb-3 border-bottom">🤸‍♂️ 취미</h3>
+                            <div class="p-3">
+                                <p> 🥐🍰 : 디저트 만들기</p>
+                                <p>어렸을 때부터 쿠키,케이크 만드는 걸 좋아해서 <b>웬만한</b> 디저트류는 다 만들 줄 알아요.</p>
+                                <p> 한때 유행했던 <b>마카롱</b>은 제대로 만드려고 밤을 새운 적도 있을 정도였습니다.</p>
+                                <p> 최근에는 두바이초콜릿도 만들어 먹었어요. </p>
+                                <p> tmi : 결국엔 레터링 케이크 가게를 운영 했다. 동네에선 나름 유명했을지도..</p>
+                            </div>
+                            <h3 class="bold_font pb-3 border-bottom">🧐 MBTI</h3>
+                            <!-- 2열 박스 -->
+                            <div class="row p-3">
+                                <div class="col">
+                                    <p> <img class="img_frame shadow rounded"
+                                            src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzAyMTFfMzQg%2FMDAxNjc2MDYwODkyODk1.fDoTTu-VqsSzmglsj_111uCikGn7oYz1t2VZAsOMS5Mg.5v1c2vNOq7cTeQhqGIQ1E-UDU3qcyxn17bUKTK1WY9Yg.JPEG.beirene%2FIMG_3053.jpg&type=a340">
+                                    </p>
+                                </div>
+                                <div class="col d-flex flex-column justify-content-center">
+                                    <p> <b>ENTP</b> 입니다. </p>
+                                    <p> 전세계 인구 중 3.2%. 풍부한 호기심. 토론의 대가. 다재다능. 개인주의. 고집이 셈. 한 가지에 집중을 못함. 시작하고 못 끝낸 일 1463개. 조용한 관종. 모험심 강함.</p>
+                                </div>
+                            </div>
+                            <h3 class="bold_font pb-3 border-bottom">🎥 좋아하는 영화</h3>
+                            <div class="row p-3">
+                                <div class="col d-flex flex-column justify-content-center">
+                                    <p> 미셸 공드리 감독의 </p>
+                                    <p> <b>
+                                            <이터널선샤인>
+                                        </b>가 인생 영화입니다. </p>
+                                    <p> 같은 감독의 다른 작품 '수면의 과학'도 그렇듯이 감독의 상상력과 표현력에 감탄하지 않을 수 없다. 스무 번 넘게 본 영화. </p>
+                                    <p>🎥그 외 영화 전공자가 추천하는 영화</p>
+                                    <p><도그빌></p>
+                                    <p><더 폴></p>
+                                    <p><줄무늬 파자마를 입은 소년></p>
+                                </div>
+                                <div class="col">
+                                    <p> <img class="img_frame shadow rounded"
+                                            src="https://search.pstatic.net/common?quality=75&direct=true&src=https%3A%2F%2Fmovie-phinf.pstatic.net%2F20111222_253%2F13245233722493bfDr_JPEG%2Fmovie_image.jpg">
+                                    </p>
+                                </div>
+                            </div>
+                            <h3 class="bold_font pb-3 border-bottom">📸 좋아하는 사진</h3>
+                            <div class="row p-3">
+                                <div class="col">
+                                    <img class="https://postfiles.pstatic.net/MjAyNTA0MDlfMTMx/MDAxNzQ0MTkxNDI5NTk5.-K8DIpu5Ah6Dze-ri3mPLSKTcHIMOXSIH3DdGAveEc8g.Ha54F6jlNR4bueiYgkSeR6CLcy_KeRI-9VJ7UvSUStMg.JPEG/IMG_4375.jpg?type=w580">
+                                </div>
+                                <div class="col d-flex flex-column justify-content-center">
+                                    <p> 캠핑, 그것도 아주 맥시멀한 캠핑</p>
+                                    <p>
+                                        미니멀하게 가는 <캠핑>도 묘미가 있지만
+                                    </p>
+                                    <p> 장비를 풀로 챙겨서 간 캠핑은</p>
+                                    <p> 그야말로 <b>완벽</b>했다.</p>
+                                    <p> 나는솔로+루미큐브+맥주 조합이면</p>
+                                    <p> 하루가 순삭이다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
