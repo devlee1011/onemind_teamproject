@@ -24,7 +24,6 @@
             width: 100%;
             border-radius: 5px 5px 0px 0px;
 
-
             mask-image: linear-gradient(to top,
                     transparent 0%,
                     black 30%);
@@ -33,6 +32,7 @@
                     black 30%);
         }
 
+        /* 배경 색상 조정은 여기에서 */
         #content_bg {
             height: 700px;
             background-color: rgba(255, 170, 181, 0.123);
@@ -42,31 +42,31 @@
             font-weight: bold;
         }
 
-        .test {
+        .make_scroll {
             float: left;
             overflow-y: auto;
             width: 100%;
             height: 700px;
         }
+
         .img_frame {
             width: 300px;
         }
 
+        /* 하이퍼링크 텍스트 스타일, 본인 페이지 배경색에 맞게 커스텀 */
         a:link {
             color: rgb(255, 152, 169);
         }
-
         a:visited {
             color: black;
         }
-
         a:hover {
             color: red;
         }
-
         a:active {
             color: green
         }
+
     </style>
 </head>
 
@@ -88,14 +88,18 @@
         <div class="p-4 mb-5 bg-body">
             <div class="container pb-5">
                 <div class="row align-items-md-stretch">
+                    <!-- 프로필 박스 -->
                     <div class="col-md-4">
                         <div id="content_bg" class="my-5 shadow rounded">
+                            <!-- 프로필 사진 설정 -->
                             <img class="profile_img"
                                 src="https://image.zeta-ai.io/profile-image/a25ec5c2-1f54-4116-b8d8-29a00cf0f6ac/d32f1005-b338-4fa3-941f-7077e2b878b1.jpeg?w=828&q=90&f=webp" />
+                            <!-- 이름, 색상 변경 -->
                             <h2 class="bold_font my-3"
                                 style="text-shadow: 2px 2px 3px rgb(184, 184, 184); text-align: center; color: rgb(0, 0, 0);">
                                 이호준</h2>
                             <div class="px-5">
+                                <!-- 좌우명, 개인을 나타내는 말, 연락처 -->
                                 <h5 class="bold_font mb-4" style="text-align: center;">🏄흘러가는 대로 사는 사람<h5>
                                         <p class="bold_font">Email : <a>ghwns2239@gmail.com</a></a></p>
                                         <p class="bold_font">SNS : <a
@@ -107,8 +111,10 @@
                             </div>
                         </div>
                     </div>
+                    <!-- 메인 박스 -->
                     <div class="col-md-8">
-                        <div id="content_bg" class="test p-4 my-5 shadow mb-5 rounded">
+                        <div id="content_bg" class="make_scroll p-4 my-5 shadow mb-5 rounded">
+                            <!-- 이곳에 내용을 자유롭게 작성 -->
                             <h3 class="bold_font pb-3 border-bottom">🖐️ printf("Hello, World!")</h3>
                             <div class="p-3">
                                 <p> <b>안녕하세요!</b> 개발자가 되고싶은 방구석 베짱이 입니다.
@@ -122,13 +128,14 @@
                                 <p> 🎮 : 게임은 요즘 <b>롤체</b>, <b>칼바람</b> 정도만 합니다. </p>
                             </div>
                             <h3 class="bold_font pb-3 border-bottom">🧐 MBTI</h3>
+                            <!-- 2열 박스 -->
                             <div class="row p-3">
                                 <div class="col">
                                     <p> <img class="img_frame shadow rounded"
                                             src="https://blog.kakaocdn.net/dn/An0zc/btqObY1AtU6/vzEIxWrOtAWdNOT2kKh14K/img.jpg">
                                     </p>
                                 </div>
-                                <div class="col">
+                                <div class="col d-flex flex-column justify-content-center">
                                     <p> <b>INFP</b> 입니다. </p>
                                     <p> 방구석에서만 울고만 있진 않아요. </p>
                                     <p> 어렸을땐 감성이 풍부했는데 </p>
@@ -138,7 +145,7 @@
                             </div>
                             <h3 class="bold_font pb-3 border-bottom">🎥 좋아하는 영화</h3>
                             <div class="row p-3">
-                                <div class="col">
+                                <div class="col d-flex flex-column justify-content-center">
                                     <p> 신카이 마코토 감독의 </p>
                                     <p> <b><초속 5센티미터></b>가 인생 영화입니다. </p>
                                     <p> 벚꽃피는 요즘 시기에 보면 두 배로 좋습니다. </p>
@@ -155,7 +162,7 @@
                                     <img class="img_frame shadow rounded"
                                             src="./public/hojun/hojun.JPG">
                                 </div>
-                                <div class="col">
+                                <div class="col d-flex flex-column justify-content-center">
                                     <p> 작년 11월에 갑자기 가고싶어서</p>
                                     <p> <봇치더락> 성지 순례를 갔다왔을때 </p>
                                     <p> 찍은 사진입니다.</p>
