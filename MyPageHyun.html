@@ -1,156 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <title>마이페이지(이의현)</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>팀원 소개</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap" rel="stylesheet">
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap");
+        * {
+            font-family: "IBM Plex Sans KR", sans-serif;
+            font-size: 18px;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
 
-      html,
-      body {
-        padding: 0px;
-        margin: 0px;
-        width: 100%;
-        height: 100%;
-        font-family: "Gowun Dodum", sans-serif;
-      }
+        .profile_img {
+            height: auto;
+            width: 100%;
+            border-radius: 5px 5px 0px 0px;
+            height: 55%;
+            mask-image: linear-gradient(to top,
+                    transparent 0%,
+                    black 30%);
+            -webkit-mask-image: linear-gradient(to top,
+                    transparent 0%,
+                    black 30%);
+        }
 
-      .main {
-        background-color: #f5f5f5;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
+        /* 배경 색상 조정은 여기에서 */
+        #content_bg {
+            height: 700px;
+            background-color: #e6ffff;
+        }
 
-      .header {
-        width: 100%;
-        height: 5rem;
-        padding: 1rem;
-        margin-bottom: 2rem;
-      }
+        .bold_font {
+            font-weight: bold;
+        }
 
-      .container {
-        display: flex;
-        height: 100%;
-      }
+        .make_scroll {
+            float: left;
+            overflow-y: auto;
+            width: 100%;
+            height: 700px;
+        }
 
-      .col {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .circle {
-        border-radius: 50%;
-        width: 60%;
-        height: 60%;
-        background-size: cover;
-        background-image: url("../onemind_teamproject/public/leeuihyun/hyunImg.png");
-        background-position: center;
-        margin-bottom: 1rem;
-      }
+        .img_frame {
+            width: 300px;
+            transition: transform 0.3s ease
+        }
 
-      .my-bg-name {
-        font-style: oblique;
-      }
+        .img_frame:hover {
+            transform: scale(1.03);
+        }
 
-      .desc {
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        margin-bottom: 2rem;
-      }
-      .desc-header {
-        width: 100%;
-      }
+        /* 하이퍼링크 텍스트 스타일, 본인 페이지 배경색에 맞게 커스텀 */
+        a:link {
+            color: rgb(255, 152, 169);
+        }
 
-      .go-back {
-        cursor: pointer;
-      }
+        a:visited {
+            color: black;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        a:active {
+            color: green;
+        }
+
+        .go-back {
+            cursor: pointer;
+            transition: transform 0.2s ease
+        }
+
+        .go-back:hover {
+            opacity: 0.8;
+            transform: scale(1.02);
+        }
     </style>
     <script>
-      function backClickEvent() {
-        alert("메인 주소를 정하면 메인으로 가는 뒤로가기 버튼");
-      }
+        function backClickEvent() {
+            history.back();
+        }
     </script>
-  </head>
-  <body>
-    <div class="main">
-      <div class="header">
-        <img
-          class="go-back"
-          src="../onemind_teamproject/public/leeuihyun/arrow-29801_640.png"
-          alt="뒤로가기"
-          width="3%"
-          onclick="backClickEvent()"
-        />
-      </div>
-      <div class="container row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-          <div class="circle"></div>
-          <h1 class="my-bg-name"><b>Lee Ui Hyun</b></h1>
-          <p>
-            안녕하세요 이의현입니다.
-            <br />
-            효율적인 코드를 작성하고 코드리뷰를 중요시하는 개발자가 되고
-            싶습니다.
-            <br />
-            다들 기간동안 힘내봐요! 🔥
-          </p>
-        </div>
-        <div class="col">
-          <div class="desc">
-            <h2 class="desc-header">ABOUT</h2>
-            <p>Name : 이의현 / Lee Ui Hyun</p>
-            <p>Birth : 1997.04.19</p>
-            <p>Email : meta212121@naver.com</p>
-          </div>
+</head>
 
-          <div class="desc">
-            <h2 class="desc-header">LIKES</h2>
-            <p>농구하기</p>
-            <p>게임하기</p>
-            <p>영화보기</p>
-            <p>여자친구랑 수다떨기</p>
-          </div>
+<body>
+    <div class="container">
+        <div class="p-2 bg-body">
+            <div class="mt-3 mx-3">
+                <img class="go-back" src="../onemind_teamproject/public/leeuihyun/arrow-29801_640.png" alt="뒤로가기"
+                    width="4%" onclick="backClickEvent()" />
+            </div>
+            <div class="container">
+                <div class="row align-items-md-stretch">
+                    <!-- 프로필 박스 -->
+                    <div class="col-md-4">
+                        <div id="content_bg" class="my-5 shadow rounded">
+                            <!-- 프로필 사진 설정 -->
+                            <img class="profile_img"
 
-          <div class="desc">
-            <h2 class="desc-header">IDENTIFIER</h2>
-            <p>멈추지 않고 꾸준하게 하기!</p>
-            <p>양자리</p>
-          </div>
+                                src="../onemind_teamproject/public/leeuihyun/hyunImg.png" />
+                            <!-- 이름, 색상 변경 -->
+                            <h2 class="bold_font my-3"
+                                style="text-shadow: 2px 2px 3px rgb(184, 184, 184); text-align: center; color: rgb(0, 0, 0);">
+                                이의현</h2>
+                            <div class="px-5">
+                                <!-- 좌우명, 개인을 나타내는 말, 연락처 -->
+                                <h5 class="bold_font mb-4" style="text-align: center;">🧑‍💻끝까지 할 사람<h5>
+                                        <p class="bold_font">Email : <a>meta212121@naver.com</a></a></p>
+                                        <p class="bold_font">SNS : <a
+                                                href="">-</a></p>
+                                        <p class="bold_font">Blog : <a
+                                                href="https://velog.io/@mrvanc/posts">velog.io/@vanc</a></p>
+                                        <p class="bold_font">Github : <a
+                                                href="https://github.com/leeuihyun">github.com/leeuihyun</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 메인 박스 -->
+                    <div class="col-md-8">
+                        <div id="content_bg" class="make_scroll p-4 my-5 shadow mb-5 rounded">
+                            <!-- 이곳에 내용을 자유롭게 작성 -->
+                            <h3 class="bold_font pb-3 border-bottom">🖐️ 안녕하세요 반갑습니다!</h3>
+                            <div class="p-3">
+                                <p> <b>안녕하세요!!</b> 백엔드로 재시작한 이의현이라고 합니다.
+                                <p> 기간 동안 열심히 학습해서 다들 좋은 결과 만들어내면 좋겠습니다.</p>
+                            </div>
+                            <h3 class="bold_font pb-3 border-bottom">🤸‍♂️ 취미</h3>
+                            <div class="p-3">
+                                <p> 조깅, 농구 좋아합니다! <b>
+                                <p> 🎮 : 게임은 <b>롤체</b> 친구들 보면 가끔 합니다. </p>
+                            </div>
+                            <h3 class="bold_font pb-3 border-bottom">🧐 MBTI</h3>
+                            <!-- 2열 박스 -->
+                            <div class="row p-3">
+                                <div class="col">
+                                    <p> <img class="img_frame shadow rounded"
+                                            src="../onemind_teamproject/public/leeuihyun/hyunmbti.png">
+                                    </p>
+                                </div>
+                                <div class="col d-flex flex-column justify-content-center">
+                                    <p> <b>ISTJ</b> 입니다. </p>
+                                    <p> 현실주의자입니다. </p>
+                                    <p> 공감능력이 그렇게 낮지는 않아요..! </p>
+                                    <p> 책임감 충만함다 </p>
+                                </div>
+                            </div>
+                            <h3 class="bold_font pb-3 border-bottom">🎥 좋아하는 영화</h3>
+                            <div class="row p-3">
+                                <div class="col d-flex flex-column justify-content-center">
+                                    <p> 신카이 마코토 감독의 </p>
+                                    <p> <b>
+                                            <인터스텔라>
+                                        </b>가 최애 영화입니다. </p>
+                                    <p> 영화를 볼 때 몰입해서 보고 브금까지 완벽해서 너무 재밌었던 것 같아요. </p>
+                                </div>
+                                <div class="col">
+                                    <p> <img class="img_frame shadow rounded"
+                                            src="../onemind_teamproject/public/leeuihyun/hyunmovie.png">
+                                    </p>
+                                </div>
+                            </div>
+                            <h3 class="bold_font pb-3 border-bottom">📸 좋아하는 사진</h3>
+                            <div class="row p-3">
+                                <div class="col">
+                                    <img class="img_frame shadow rounded" src="../onemind_teamproject/public/leeuihyun/mong2.jpeg">
+                                </div>
+                                <div class="col d-flex flex-column justify-content-center">
+                                    <p> 막내 몽이입니다.</p>
+                                    <p>
+                                        벌써 12살이에요!
+                                    </p>
+                                    <p> 이번년도에 수술도 하고</p>
+                                    <p> 앞으로도 계속 약 먹이면서 살아야 합니다. 😢 </p>
+                                    <p> 그래도 지금은 건강해요. 앞으로도 오래 막내로 있었으면 좋겠네요.</p>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col">
-          <div class="desc">
-            <h2 class="desc-header">MBTI</h2>
-            <p>ISTJ</p>
-          </div>
-
-          <div class="desc">
-            <h2 class="desc-header">FAVORITE MOVIE</h2>
-            <p>인터스텔라</p>
-          </div>
-          <div class="desc">
-            <h2 class="desc-header">FAVORITE PHOTO</h2>
-            <img
-              src="../onemind_teamproject/public/leeuihyun/mong2.jpeg"
-              alt="몽이"
-              width="50%"
-            />
-            <p>몽이🐶</p>
-          </div>
-        </div>
-      </div>
     </div>
-  </body>
+</body>
+
 </html>
