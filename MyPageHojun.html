@@ -51,6 +51,11 @@
 
         .img_frame {
             width: 300px;
+            transition: transform 0.3s ease
+        }
+
+        .img_frame:hover {
+            transform: scale(1.03);
         }
 
         /* 하이퍼링크 텍스트 스타일, 본인 페이지 배경색에 맞게 커스텀 */
@@ -72,12 +77,12 @@
 
         .go-back {
             cursor: pointer;
+            transition: transform 0.2s ease
         }
 
         .go-back:hover {
             opacity: 0.8;
             transform: scale(1.02);
-            transition: all 0.2s ease;
         }
     </style>
     <script>
